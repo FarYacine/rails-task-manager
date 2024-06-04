@@ -1,0 +1,13 @@
+<h2><%= @tasks.title %></h2>
+<p><%= @tasks.details %></p>
+
+<button>
+  <%= link_to "modifier la tache", task_edit_path %>
+</button>
+<button>
+  <%= link_to "supprimer la tache", task_destroy_path(@tasks), data: {turbo_method: :delete, turbo_confirm: "Est-ce que tu es sûr?"} %>
+</button>
+
+<button>
+<%= link_to "revenir sur l'index", tasks_path %>
+</button>
